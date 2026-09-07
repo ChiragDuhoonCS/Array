@@ -3,6 +3,8 @@ using namespace std;
 
 //> FINDING SECOND LARGEST
 
+
+ //$ |||||  BETTER SOLUTION |||||||||
 void function1() {
     int sl[] = {1,2,4,7,7,5};
 
@@ -24,6 +26,7 @@ void function1() {
     }
     printf("%d", second_largest);
     
+    //$ time complexity of 2n  and space is 1
 }
 
 int main() {
