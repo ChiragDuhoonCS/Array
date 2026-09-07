@@ -2,7 +2,8 @@
 using namespace std;
 
 
-//? OPTIMIZE SOLUTION
+
+ //$ |||||  OPTIMIZE SOLUTION |||||||||
 void function1() {
     int arr[] = {3,8,1,5,2};
     int largest;
@@ -23,6 +24,7 @@ void function1() {
     }
     printf("%d",largest);
     
+    //$ time complexity = n ig 
 }
 
 int main() {
