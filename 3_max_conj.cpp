@@ -5,9 +5,12 @@ using namespace std;
 int findMaxConsecutiveOnes(const vector<int>& nums) {
     int max_count = 0;
     int count = 0;
+    int n;
+    cout << "Which number cojugate you want to find: ";
+    cin >> n;
 
     for (int i = 0; i < nums.size(); i++) {
-        if (nums[i] == 1) { //finding longest streak of 1
+        if (nums[i] == n) { //finding longest streak of 1
             count++;
             max_count = max(max_count, count);
         } else {
