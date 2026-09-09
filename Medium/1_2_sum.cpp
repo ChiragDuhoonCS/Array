@@ -41,6 +41,40 @@ string twoSum(int n, vector<int> &arr, int target) {
     return "NO";
 }
 
+//! BY WITHOUT HASHING MAP USING 2 POINTER
+
+vector<int> twoSum(vector<int>& nums, int target) {
+    int n = nums.size();
+    
+    //@ Store elements along with their original indices
+    vector<pair<int, int>> temp(n);
+    for (int i = 0; i < n; i++) {
+        temp[i] = {nums[i], i};
+    }
+    
+    // Sort based on the element values
+    sort(temp.begin(), temp.end());
+    
+    int left = 0, right = n - 1;
+    
+    //@ Two pointer traversal
+    while (left < right) {
+        int sum = temp[left].first + temp[right].first;
+        
+        if (sum == target) {
+            return {temp[left].second, temp[right].second};
+        } 
+        else if (sum < target) {
+            left++;
+        } 
+        else {
+            right--;
+        }
+    }
+    
+    return {-1, -1}; // If no pair is found
+}
+
 int main()
 {
     int n = 5;
