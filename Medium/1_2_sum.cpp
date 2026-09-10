@@ -57,7 +57,23 @@ vector<int> twoSum(vector<int>& nums, int target) {
     
     int left = 0, right = n - 1;
     
-    /
+    //@ Two pointer traversal
+    while (left < right) {
+        int sum = temp[left].first + temp[right].first;
+        
+        if (sum == target) {
+            return {temp[left].second, temp[right].second};
+        } 
+        else if (sum < target) {
+            left++;
+        } 
+        else {
+            right--;
+        }
+    }
+    
+    return {-1, -1}; // If no pair is found
+}
 
 int main()
 {
