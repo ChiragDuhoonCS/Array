@@ -39,7 +39,29 @@ void better(vector<int>& nums) {
     }
 }
 
+
+
+            // Note: mid is not incremented here because we need 
+            // to check the value that was swapped from `high`.
+        }
+    }
+}
+
 int main() {
+    vector<int> nums = {2, 0, 2, 1, 1, 0};
+    
+    sortColors(nums);
+
+    cout << "Sorted array: ";
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+/*int main() {
     vector<int> nums = {2, 0, 2, 1, 1, 0};
     
     better(nums);
@@ -51,7 +73,7 @@ int main() {
     cout << endl;
 
     return 0;
-}
+}*/
 
 /*int main() {
     brute();
