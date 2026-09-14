@@ -4,6 +4,14 @@ using namespace std;
 //> FINDING SECOND LARGEST
 
 
+
+//> ||||| BRUTE SOLUTION ||||||||
+void brutesort(int arr[], int n) {
+    sort(arr,arr + n);
+}
+
+
+
  //$ |||||  BETTER SOLUTION |||||||||
 void function1() {
     int sl[] = {1,2,4,7,7,5};
@@ -29,7 +37,21 @@ void function1() {
     //$ time complexity of 2n  and space is 1
 }
 
-int main() {
+
+//FOR BETTER SOLUTION
+/*int main() {
     function1();
     return 0;
+}*/
+
+
+int main() {
+    int arr[] = {3,8,34,56,98,40};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    brutesort(arr,n);
+
+    printf("Here is Second Number: %d", arr[n-2]);
+
+
 }
