@@ -3,6 +3,11 @@ using namespace std;
 
 
 
+//> ||||| BRUTE SOLUTION ||||||||
+void brutesort(int arr[], int n) {
+    sort(arr,arr + n);
+}
+
  //$ |||||  OPTIMIZE SOLUTION |||||||||
 void function1() {
     int arr[] = {3,8,1,5,2};
@@ -27,7 +32,20 @@ void function1() {
     //$ time complexity = n ig 
 }
 
-int main() {
+// FOR OPTIMISE ONE
+/*& int main() {
     function1();
     return 0;
+}*/
+
+// FOR BRUTE ONE
+int main() {
+    int arr[] = {3,8,34,56,98,40};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    brutesort(arr,n);
+
+    printf("Here is largest Number: %d", arr[n-1]);
+
+
 }
