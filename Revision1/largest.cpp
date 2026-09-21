@@ -21,7 +21,7 @@ int large2() {
 
     int largest = arr[0]; //@ focus here
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++) //& can take 0 here too but take 1
     {
         if(arr[i] > largest){
             largest = arr[i]; //@here too
